@@ -1,0 +1,46 @@
+add_namespace = daszealand
+
+###########################
+# Das Zealand Events
+###########################
+
+add_namespace = daszealand
+
+# Das Pigeon coup
+country_event = {
+	id = daszealand.1
+	title = daszealand.1.t
+	desc = daszealand.1.d
+	picture = report_event_daspigeon_coup.dds
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = DNZ
+		AND + {
+			date = 1936.1.1
+
+		}
+	}
+	option = { # Okay
+		name = Okay
+		ai_chance = { factor = 100 }
+		add_political_power = 100
+		declare_war_on = {
+		target = NZL
+		type = annex_everything
+		}
+
+		effect_tooltip = {
+			random_list = {
+				60 = {
+					country_event = soviet.2
+				}
+				40 = {
+					country_event = soviet.3
+				}
+			}
+		}
+	
+}
+
